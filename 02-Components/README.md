@@ -362,7 +362,7 @@ import { motion } from "framer-motion"
 
 export const ShimmerButton = ({ children }) => {
   return (
-    <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none">
+    <button className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none">
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e2e8f0_0%,#a78bfa_50%,#e2e8f0_100%)]" />
       <span className="relative z-10 flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-white">
         {children}
