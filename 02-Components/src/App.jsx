@@ -1,16 +1,15 @@
 import React from 'react'
+import Card from './components/Card.jsx'
 
 const App = () => {
   return (
-    <div className="font-bold bg-amber-300 text-blue-900 border-2 p-4">Components 
-    <h1 className="text-emerald-600 dark:text-sky-600 border-2 p-4 rounded-xl">Welcome To React</h1>
-    <div className="max-w-sm w-full h-auto bg-white rounded-xl shadow-md p-6 mt-8 overflow-hidden transition-shadow">
-      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="simple-image" className="w-full h-80" />
-      <div className="p-4 ">
-        <h2 className="text-lg font-semibold text-gray-800">Cards</h2>
-        <p className="mt-2 text-gray-600 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, alias!</p>
-        <button className="mt-4 px-4 rounded-lg py-2 bg-blue-600 text-white hover:bg-blue-700">Buy Now</button>
-      </div>
+    <div className="font-bold bg-amber-300 text-blue-900 border-2 p-4">
+    <h1 className="text-emerald-600 dark:text-sky-600 border-2 p-4 rounded-xl">Welcome To Components</h1>
+    <div className="flex gap-4">
+      <Card imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail" title="Buy Python" description="Python is a programming language that lets you work more quickly and integrate your systems more effectively."/>
+      <Card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi7-QSbrTDw-udyB0dgf9D0-vdxKg8GC8wG3v-c3XdeA&s" title="Buy JavaScript" description="JavaScript is a programming language that conforms to the ECMAScript specification, which was created to standardize JavaScript"/>
+      <Card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRF9NMAd5WmguDXnRKVAfYRcfaao4kdcLbJ_lqZPLLxw&s=10" title="Buy C++" description="C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language."/>
+      
     </div>
     </div>
   )
