@@ -18,7 +18,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="app">
       <header>
         <h1>Queue Management Application</h1>
         <p>Manage Your Customer Efficiently</p>

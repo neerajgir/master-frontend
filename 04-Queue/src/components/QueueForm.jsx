@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import {FaUserPlus} from "react-icons/fa"
 
@@ -13,24 +12,28 @@ const QueueForm = ({onAdd}) => {
         setService('')
     }
   return (
-    <div>
+    <div className="queue-form">
+        <h2><FaUserPlus/> Add To Queue</h2>
         <form onSubmit={handleSubmit}>
-            <h2>Add To Queue</h2>
-            <div>
-                <input type="text" placeholder="Customer Name" value={name} onChange={(e)=>setName(e.target.value)}/>
+            <div className="form-row">
+                <div className="field">
+                    <label htmlFor="customer-name">Customer Name</label>
+                    <input id="customer-name" type="text" placeholder="e.g. John Doe" value={name} onChange={(e)=>setName(e.target.value)}/>
+                </div>
+                <div className="field">
+                    <label htmlFor="service-select">Service</label>
+                    <select id="service-select" value={service} onChange={(e)=>setService(e.target.value)}>
+                        <option value="">Select Service</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="payment">Payment</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <button type="submit" className="submit-btn">
+                    <FaUserPlus/> Add Customer
+                </button>
             </div>
-            <div>
-                <select value={service} onChange={(e)=>setService(e.target.value)}>
-                    <option value="">Select Service</option>
-                    <option value="consultation">Consultation</option>
-                    <option value="payment">Payment</option>
-                    <option value="support">Support</option>
-                </select>
-            </div>
-            <button type="submit">
-                <FaUserPlus/> Add Customer</button>
         </form>
-
     </div>
   )
 }
