@@ -2,7 +2,7 @@ import BasicProp from "./components/BasicProp.jsx"
 import ChildrenProp from "./components/ChildrenProp.jsx" 
 import ComplexProp from "./components/ComplexProp.jsx" 
 import RefProp from "./components/Refprop.jsx" 
-import ThemeToggler from "./components/ThemeToggler.jsx" 
+import ThemeToggler, {ThemeProvider, useTheme} from "./components/ThemeToggler.jsx" 
 
 function Navigation({ isDark }){ 
   const section = [ 
@@ -29,7 +29,8 @@ function Navigation({ isDark }){
   ) 
 } 
 
-function AppContent({ isDark }){ 
+function AppContent(){ 
+  const {isDark} = useTheme()
   return ( 
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}> 
       <Navigation isDark={isDark}/> 
@@ -70,10 +71,11 @@ function AppContent({ isDark }){
 
 
 const App = () => { 
-  const isDark = true 
 
   return ( 
-    <AppContent isDark={isDark}/> 
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   ) 
 } 
 
