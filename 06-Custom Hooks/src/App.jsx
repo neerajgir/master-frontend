@@ -2,7 +2,10 @@
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+    <div></div>
+    <h1>Custom Hooks Class</h1>
+    </>
   )
 }
 
