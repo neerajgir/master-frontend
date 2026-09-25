@@ -1,3 +1,4 @@
+//get endpoint
 export async function GET(request){
     const res =await fetch('https://jsonplaceholder.typicode.com/todos',{
         headers:{
