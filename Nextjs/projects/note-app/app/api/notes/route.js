@@ -1,6 +1,12 @@
 import { connectDB } from "@/lib/db.js"; 
 import Note from "@/lib/models/note.js"; 
 
+export async function GET(req){
+  await connectDB();
+  const notes = await Note.find().sort({ createdAt: -1 });
+  return Response.json(notes, { status: 200 });
+}
+
 export async function POST(req) {
   try {
     await connectDB(); 
