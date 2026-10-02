@@ -33,7 +33,7 @@ const Dashboard = () => {
     </div>
     <div>
       {tab === "analytics" && <p>Showing Analytics Data</p>}
-      {tab === "Sales" && <p>Showing Sales Data</p>}
+      {tab === "sales" && <p>Showing Sales Data</p>}
       {tab === "customers" && <p>Showing customers Data</p>}
     </div>
     </div>
