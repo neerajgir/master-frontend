@@ -1,11 +1,11 @@
-"use client"
-import {useParams} from 'next/navigation'
+// "use client"
+// import {useParams} from 'next/navigation'
 
-const ShopTagItem = () => {
-    const param = useParams()
-  return (
-    <div>ShopTagItem</div>
-  ) 
-}
+// const ShopTagItem = () => {
+//     const param = useParams()
+//   return (
+//     <div>ShopTagItem</div>
+//   ) 
+// }
 
-export default ShopTagItem
+// export default ShopTagItem

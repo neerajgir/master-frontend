@@ -1,11 +1,11 @@
-"use client"
-import {useParams} from 'next/navigation'
+// "use client"
+// import {useParams} from 'next/navigation'
 
-const ShopPage = () => {
-    const param = useParams()
-  return (
-    <div>ShopPage</div>
-  ) 
-}
+// const ShopPage = () => {
+//     const param = useParams()
+//   return (
+//     <div>ShopPage</div>
+//   ) 
+// }
 
-export default ShopPage
+// export default ShopPage
