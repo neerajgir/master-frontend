@@ -14,6 +14,7 @@
 //   );
 // }
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -22,7 +23,8 @@ const Home = () => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-200">
+          <Image src={"/img.jpeg"} width={600} height={300} alt="pic" />
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-200 mt-4">
             Pitchfork Kickstarter Taxidermy
           </h1>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
@@ -184,7 +186,7 @@ const Home = () => {
         </button>
       </div>
       <Link href={"/about"} className="text-blue-500 underline px-4 py-5">
-      Go to About
+        Go to About
       </Link>
     </section>
   );
