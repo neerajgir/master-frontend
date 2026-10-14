@@ -14,6 +14,7 @@
 //   );
 // }
 
+import Link from "next/link";
 import React from "react";
 
 const Home = () => {
@@ -86,9 +87,9 @@ const Home = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-6 h-6"
                   viewBox="0 0 24 24"
                 >
@@ -182,6 +183,9 @@ const Home = () => {
           Button
         </button>
       </div>
+      <Link href={"/about"} className="text-blue-500 underline px-4 py-5">
+      Go to About
+      </Link>
     </section>
   );
 };

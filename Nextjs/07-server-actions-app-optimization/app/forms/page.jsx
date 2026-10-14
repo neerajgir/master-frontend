@@ -1,8 +1,11 @@
+"use client"
 import { submitUser } from '@/actions/action';
 import Form from 'next/form';
+import {useRouter}  from 'next/navigation'
 import React from 'react'
 
 const FormPage = () => {
+  const router = useRouter();
   return (
     <div>
         <h1>Create User</h1>
@@ -16,6 +19,7 @@ const FormPage = () => {
             <input type="text" name="query" placeholder="Search post-id" />
             <button type="submit">Search</button>
         </Form>
+        <button onClick={()=>router.back()}>Go Back</button>
     </div>
   )
 }

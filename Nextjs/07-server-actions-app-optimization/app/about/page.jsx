@@ -1,4 +1,6 @@
+"use client"
 import {Inter, Roboto_Mono} from 'next/font/google'
+import Link from 'next/link';
 
 const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -8,6 +10,11 @@ const roboto_mono = Roboto_Mono({
 const AboutPage = () => {
   return (
     <section className={`text-gray-600 body-font ${roboto_mono.className}`}>
+      <Link href={"/forms"} className="text-blue-500 underline px-4 py-5" replace 
+      onNavigate={()=>console.log("Navigated")}
+      >
+      Go To Forms
+      </Link>
       <div className="container px-5 py-24 mx-auto">
         <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
           <svg
