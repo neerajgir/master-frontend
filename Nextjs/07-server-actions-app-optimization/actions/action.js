@@ -18,3 +18,9 @@ export async function updateTodo(title, desc, isCompleted) {
         message: "Update Successfully", newData
     }
 }
+
+export async function submitUser(formData) {
+    const name = formData.get("name")
+    const email = formData.get("email")
+    console.log("Submit user data", name, email)
+}
