@@ -123,8 +123,7 @@ export default function Home() {
               </table>
             </div>
           </section>
-        </div>
-        
+        </div> 
       </main>
     </div>
   );
